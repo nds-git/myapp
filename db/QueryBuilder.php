@@ -35,7 +35,7 @@ class QueryBuilder {
 /*
  *	Добавление записи в таблицу
 */
-  function create($table, $data) {
+  public function create($table, $data) {
 
   	$keys = implode('`,`', array_keys($data));
   	$tags = ":".implode(', :', array_keys($data));
@@ -48,7 +48,7 @@ class QueryBuilder {
 /*
  *	Изменение записи в таблицу
 */
-  function update($table, $data, $id) {
+  public function update($table, $data, $id) {
 
   	$keys = array_keys($data);
   	
@@ -69,7 +69,7 @@ class QueryBuilder {
 /*
  *	Удалить запись в таблицу
 */
-  function delete($table, $id) {
+  public function delete($table, $id) {
     
 	$sql = "DELETE FROM `{$table}` WHERE `id` = :id";
 	$statement = $this -> pdo -> prepare($sql);

@@ -2,14 +2,11 @@
 
 class Connection {
 
- public static function make($config) {
- 
-	return new PDO(
-		"{$config['host']};dbname={$config['db']}",
-		"{$config['user']}",
-		"{$config['pass']}",
-		array(PDO::MYSQL_ATTR_INIT_COMMAND => "{$config['charset']}")
-	);
+  static function make($paramToConnect) { 
+    return new PDO(
+		"{$paramToConnect['host']};dbname={$paramToConnect['db']};{$paramToConnect['charset']}",
+		"{$paramToConnect['user']}",
+		"{$paramToConnect['pass']}");
  }// fin public static function make
  
 } // fin Connection

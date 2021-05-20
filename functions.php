@@ -1,4 +1,5 @@
 <?php 
+  // $pdo = new PDO("mysql:host=localhost;dbname=app;charset=utf8","root","root");
 
 /*
  *	Удобный var_dump
@@ -11,12 +12,6 @@ function vd($data) {
 	die;
 }
 
-
-function connectToDb() {
-
-  $pdo = new PDO("mysql:host=localhost;dbname=app;charset=utf8","root","root");
+ 
   
-  return $pdo;
-}
-
-
+ 
