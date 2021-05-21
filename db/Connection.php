@@ -1,12 +1,14 @@
 <?php
-
+/**
+ * тоже самое что и $pdo = new PDO("mysql:host=localhost;dbname=app;charset=utf8","root","root");
+**/
 class Connection {
 
-  static function make($paramToConnect) { 
+  static function make($paramsToConnect) { 
     return new PDO(
-		"{$paramToConnect['host']};dbname={$paramToConnect['db']};{$paramToConnect['charset']}",
-		"{$paramToConnect['user']}",
-		"{$paramToConnect['pass']}");
+		"{$paramsToConnect['host']};dbname={$paramsToConnect['db']};{$paramsToConnect['charset']}",
+		"{$paramsToConnect['user']}",
+		"{$paramsToConnect['pass']}");
  }// fin public static function make
  
 } // fin Connection
