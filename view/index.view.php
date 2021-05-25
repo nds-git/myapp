@@ -27,7 +27,7 @@
 <div class="container">
  <div class="row">
   <div class="col-md-8">
-   <a href="./add-post.php" class="btn btn-success">Add Post</a>
+   <a href="./add-post" class="btn btn-success">Add Post</a>
    <table class="table">
 	 <thead>
 	    <tr>

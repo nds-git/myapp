@@ -13,5 +13,7 @@ function vd($data) {
 }
 
  
-  
+ function f_show($id,$getFileName) {
+   return "/".$getFileName.".php?id=".$id."" ;
+ }
  

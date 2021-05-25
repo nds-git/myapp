@@ -1,12 +1,24 @@
 <?php
 require __DIR__ .'/../functions.php';
+require __DIR__ .'/../classes/GetFileName.php';
 
-// 1. настроить сервер.чтобы все шло чз index.php
-// 2. вардампить сервер
+
+if(!empty($_GET)) {
+ $getFile = new GetFileName;
+ $getFileName = $getFile-> f_getFileName($_GET);
+}
+
+$id = $_GET['id']*1;
 
 $routes = [
-	"/"          => '/controllers/homepage.php',
-    "/about"     => '/controllers/about.php'
+	"/"          	 => '/controllers/homepage.php',
+    "/about"    	 => '/controllers/about.php',
+    "/add-post"    	 => '/controllers/add-post.php',
+    "/store"    	 => '/controllers/store.php',
+    f_show($id,$getFileName) 	 => "/controllers/".$getFileName.".php",
+    "/update"    	 => '/controllers/update.php',
+    "/delete"    	 => '/controllers/delete.php',
+
 ];
 
 $route = $_SERVER['REQUEST_URI'];

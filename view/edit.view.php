@@ -26,7 +26,7 @@
 <div class="container">
  <div class="row">
   <div class="col-md-8 offset-md-2">
-   <form action="./update.php" method="POST">
+   <form action="./update" method="POST">
     <div class="form-group">
       <label for="" class="">Редактировать</label>
         <input type="text" name="title" class="form-control" value="<?=$post['title']?>" /> <br/>
@@ -36,6 +36,8 @@
     <div class="form-group">
       <button class="btn btn-success">Edit Post</button> 
     </div>
+    <p><a href="/">Вернуться</a></p>
+
    </form>
 
   </div>
