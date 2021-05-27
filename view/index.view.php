@@ -28,6 +28,7 @@
  <div class="row">
   <div class="col-md-8">
    <a href="./add-post" class="btn btn-success">Add Post</a>
+   <a href="./new-person" class="btn btn-warning">New person</a>
    <table class="table">
 	 <thead>
 	    <tr>

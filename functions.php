@@ -12,8 +12,13 @@ function vd($data) {
 	die;
 }
 
- 
+ /*
+ *  f_show
+ *  возвращает нам имя файла и его id
+ *  для того, чтобы автоматически генерировать страницы 
+*/
  function f_show($id,$getFileName) {
+ 	
    return "/".$getFileName.".php?id=".$id."" ;
  }
  

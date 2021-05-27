@@ -46,6 +46,7 @@ class QueryBuilder {
   	$keys = implode('`,`', array_keys($data));
   	$tags = ":".implode(', :', array_keys($data));
 
+
 	$sql = "INSERT INTO `{$table}` (`$keys`) VALUES ({$tags})";
 	$statement = $this -> pdo -> prepare($sql);
 	$statement -> execute($data);
@@ -85,10 +86,37 @@ class QueryBuilder {
   } 
 
 
+/*
+ *  поиск конкретной записи в таблице 
+*/
+ public function get($table,$where = []) {
+  return $this->action('SELECT *', $table, $where);
+ }
+ 
+/*
+ *  поиск конкретной записи в таблице 
+*/
+ public function action($action,$table,$where = []) {
+  if(count($where === 3) ) {
+   
+   $operators = ['=','>','<','>=','<=','!='];
 
+   $field    = $where[0];
+   $operator = $where[1]; 
+   $value    = $where[2]; 
+  
+   if(in_array($operator,$operators)) {
 
+    $sql = "{$action} FROM `{$table}` WHERE `{$field}` {$operator} ?";
+    if(!$this -> query($sql,[$value]) -> error()) {
+     return $this;
+    }
+   
+   }
 
-
+  }
+  return false;
+ }
 
 
 
