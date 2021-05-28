@@ -1,4 +1,5 @@
 <?php 
+session_start();
 
 $db = require __DIR__ .'/../db/Start.php';
 

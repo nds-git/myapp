@@ -1,5 +1,6 @@
-
 <?php
+session_start();
+
 $db = require __DIR__ .'/../db/Start.php';
 
 $id = $_GET['id']*1;

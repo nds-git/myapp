@@ -17,8 +17,8 @@ if($_POST['name']) {
     'require' 	=> true
    ],
    'title' => [
-    'min' 		=> 5,
-    'max'		=> 155,
+    'min' 		=> 15,
+    'max'		=> 255,
     'require' 	=> true
    ],
    'name' => [

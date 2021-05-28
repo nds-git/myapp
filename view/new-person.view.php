@@ -13,21 +13,16 @@ session_start();
 
 </head>
 <body>
-
-
-
-
-
 <br/><br/>
 <div class="container">
  <div class="row">
   <div class="col-md-8 offset-md-2">
-    <?php
+<?php
+
   if($_SESSION) {
      echo "<div class=\"alert alert-".$_SESSION['sms']." text-dark\" role=\"alert\">".$_SESSION['error']."</div>";
      session_unset();
-  }
- 
+  } 
 ?>
    <form action="./add-person" method="POST">
    	<div class="form-group">
@@ -55,6 +50,7 @@ session_start();
    		<button class="btn btn-success">Add Post</button> 
    	</div>
    </form>	 
+   <p><a href="/">Вернуться</a></p>
   </div>
  </div>
 </div>
