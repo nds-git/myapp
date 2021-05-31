@@ -11,13 +11,11 @@ if($_POST['title']) {
   
   $validate -> check($_POST, [
    'title' => [
-    'min' 		=> 15,
+    'min' 	=> 15,
     'max'		=> 255,
     'require' 	=> true
    ]
 ]);
-
-
 
  if($validate -> passed()) {
   $posts = $db -> create('posts',[
@@ -32,4 +30,4 @@ if($_POST['title']) {
     }
     
   }
- }
+}
