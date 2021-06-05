@@ -20,7 +20,10 @@ $routes = [
     "/update"    	 => '/controllers/update.php',
     "/delete"    	 => '/controllers/delete.php',
     "/new-person"    => '/controllers/new-person.php',
-    "/add-person"    => '/controllers/add-person.php'
+    "/add-person"    => '/controllers/add-person.php',
+    "/namespace"     => '/controllers/namespace.php',
+    "/spl"            => '/controllers/spl.php',
+
 ];
 
 $route = $_SERVER['REQUEST_URI'];
